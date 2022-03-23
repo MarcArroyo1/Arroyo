@@ -6,11 +6,11 @@ extents = Vector2( 20, 191.25 )
 [node name="ZONA" type="Area2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 57.0
-margin_top = 94.0
-margin_right = 97.0
-margin_bottom = 477.0
+margin_left = 796.0
+margin_top = 105.0
+margin_right = 836.0
+margin_bottom = 488.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 77, 285.25 )
+position = Vector2( 816, 297 )
 shape = SubResource( 1 )
