@@ -36,6 +36,7 @@ position = Vector2( -2.24999, -30.25 )
 scale = Vector2( 0.433594, 0.388672 )
 frames = SubResource( 1 )
 animation = "camina"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -54,3 +54,15 @@ func _on_FINAL_body_entered(body):
 func _on_REINICI_body_entered(body):
 	if body.is_in_group('Personatge'):
 		get_tree().change_scene("res://Escenes/KinematicBody2D.tscn")
+
+
+func _on_REINICI_2_body_entered(body):
+	get_tree().change_scene("res://Escenes/KinematicBody2D.tscn")
+
+
+func _on_PORTA_body_entered(body):
+	get_tree().change_scene("res://Escenes/Cossos/ESCENA 3.tscn")
+
+
+func _on_BANDERA_body_entered(body):
+	get_tree().change_scene("res://Escenes/Cossos/ESCENA 4.tscn")

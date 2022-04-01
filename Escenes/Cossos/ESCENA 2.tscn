@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Escenes/Cossos/KinematicBody2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/Cossos/SUELO 1.tscn" type="PackedScene" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://Escenes/Cossos/SUELO 9.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Escenes/Cossos/SUELO 8.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Escenes/Cossos/SUELo 7.tscn" type="PackedScene" id=11]
+[ext_resource path="res://spikes.png" type="Texture" id=12]
+[ext_resource path="res://Escenes/Cossos/REINICI 2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Escenes/Cossos/PORTAfinal.tscn" type="PackedScene" id=14]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( 167, 174 )
@@ -19,10 +22,10 @@ b = Vector2( 235, 109 )
 [node name="ESCENA 2" type="Node2D"]
 
 [node name="KinematicBody2D3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 24, 87 )
+position = Vector2( 38, 85 )
 
 [node name="SUELO 1" parent="." instance=ExtResource( 2 )]
-position = Vector2( -28, 28 )
+position = Vector2( -26, 30 )
 
 [node name="SUELO 2" parent="." instance=ExtResource( 3 )]
 
@@ -56,3 +59,44 @@ rect_rotation = 46.2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 647, 7 )
 shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 83, 530 )
+scale = Vector2( 1.29688, 1 )
+texture = ExtResource( 12 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 238.5, 530 )
+scale = Vector2( 1.16406, 1 )
+texture = ExtResource( 12 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 390, 530 )
+scale = Vector2( 1.1875, 1 )
+texture = ExtResource( 12 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 538, 530 )
+scale = Vector2( 1.14844, 1 )
+texture = ExtResource( 12 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 674, 529 )
+texture = ExtResource( 12 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 804, 529 )
+texture = ExtResource( 12 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 932, 529 )
+texture = ExtResource( 12 )
+
+[node name="REINICI 2" parent="." instance=ExtResource( 13 )]
+
+[node name="PORTA" parent="." instance=ExtResource( 14 )]
+
+[connection signal="body_entered" from="REINICI 2" to="KinematicBody2D3" method="_on_REINICI_2_body_entered"]
+[connection signal="body_entered" from="PORTA" to="KinematicBody2D3" method="_on_PORTA_body_entered"]
