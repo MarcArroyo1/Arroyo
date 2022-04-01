@@ -1,0 +1,58 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Escenes/Cossos/KinematicBody2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenes/Cossos/SUELO 1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenes/Cossos/SUELO 2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenes/Cossos/PORTA.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenes/Cossos/SUELO 3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Escenes/Cossos/SUELO 4.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Escenes/Cossos/SUELO 5.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Escenes/Cossos/SUELO 6.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenes/Cossos/SUELO 9.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Escenes/Cossos/SUELO 8.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Escenes/Cossos/SUELo 7.tscn" type="PackedScene" id=11]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 167, 174 )
+b = Vector2( 235, 109 )
+
+[node name="ESCENA 2" type="Node2D"]
+
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 24, 87 )
+
+[node name="SUELO 1" parent="." instance=ExtResource( 2 )]
+position = Vector2( -28, 28 )
+
+[node name="SUELO 2" parent="." instance=ExtResource( 3 )]
+
+[node name="Sprite" parent="." instance=ExtResource( 4 )]
+position = Vector2( 983, 33 )
+
+[node name="SUELO 3" parent="." instance=ExtResource( 5 )]
+
+[node name="SUELO 4" parent="." instance=ExtResource( 6 )]
+
+[node name="SUELO 5" parent="." instance=ExtResource( 7 )]
+
+[node name="SUELO 6" parent="." instance=ExtResource( 8 )]
+
+[node name="SUELo 7" parent="." instance=ExtResource( 11 )]
+
+[node name="SUELO 8" parent="." instance=ExtResource( 10 )]
+position = Vector2( 36, -6 )
+
+[node name="SUELO 9" parent="." instance=ExtResource( 9 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+margin_left = 884.0
+margin_top = 115.0
+margin_right = 895.0
+margin_bottom = 213.0
+rect_rotation = 46.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 647, 7 )
+shape = SubResource( 1 )

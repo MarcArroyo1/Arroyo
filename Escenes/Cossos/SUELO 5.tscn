@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 6.5 )
+
+[node name="SUELO 5" type="StaticBody2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 424.0
+margin_top = 345.0
+margin_right = 464.0
+margin_bottom = 357.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 444, 351.5 )
+shape = SubResource( 1 )

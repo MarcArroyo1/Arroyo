@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 14.1923, 37.9328 )
+
+[node name="TERRA 7" type="StaticBody2D"]
+position = Vector2( 34, 2 )
+rotation = 0.261799
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 922.591
+margin_top = 256.694
+margin_right = 949.591
+margin_bottom = 333.694
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 937.473, 295.682 )
+rotation = 4.47035e-08
+scale = Vector2( 1, 1 )
+shape = SubResource( 7 )
